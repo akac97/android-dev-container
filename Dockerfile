@@ -6,7 +6,7 @@ ENV ANDROID_NDK_HOME $ANDROID_HOME/ndk-bundle
 ENV PATH $PATH:$ANDROID_HOME/bin:$ANDROID_NDK_HOME
 
 RUN pacman -Syu --noconfirm && \
-    pacman -S --noconfirm wget curl unzip git git-lfs python qemu && \
+    pacman -S --noconfirm wget curl unzip git git-lfs python qemu zip gzip && \
     cd / && \
     curl --tlsv1.3 -s "https://get.sdkman.io" | bash && \
     sdk upgrade && \
